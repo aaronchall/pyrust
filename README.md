@@ -1,6 +1,8 @@
-PyRust
+# PyRust
 
 Using Nix Flake to provision requirements for a rust library accessible via Python.
+
+## Contents
 
 - flake.nix provisions requirements
 - pyproject.toml - builds using maturin
@@ -8,7 +10,8 @@ Using Nix Flake to provision requirements for a rust library accessible via Pyth
 - src/lib.rs - rust pymodule implementation
 - fib.py - test and see the performance difference between native Python and calling Rust from Python
 
-To try this out:
+## Try it out
+
 0. git clone and cd to this directory
 1. (be sure nix is installed and) `nix develop`
 2. run the test with `python -m fib`
