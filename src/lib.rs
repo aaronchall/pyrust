@@ -10,18 +10,10 @@ mod pyrust {
     fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
         Ok((a + b).to_string())
     }
+
     /// fib(i) returns the ith fibonacci number, found via recursion
     #[pyfunction]
     fn fib(i: i64) -> i64 {
-        if i <= 1 {
-            i
-        } else {
-            fib(i-1) + fib(i-2)
-        }
-    }
-    /// fib2(i) returns the ith fibonacci number, found via recursion
-    #[pyfunction]
-    fn fib2(i: i64) -> i64 {
         if i <= 1 {
             i
         } else {
