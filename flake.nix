@@ -45,7 +45,7 @@
         shellHook = ''
           echo "Python: $(python --version)"
           echo "Rust: $(rustc --version)"
-          echo "Use 'maturin develop --uv' or 'uv sync' to build the Rust module"
+          echo "Use 'uv sync' to build the Rust module"
           uv sync
           source .venv/bin/activate
         '';
