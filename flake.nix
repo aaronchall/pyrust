@@ -34,6 +34,8 @@
         # Required for PyO3
         env = {
           PYO3_PYTHON = "${python}/bin/python";
+          UV_PYTHON = "${python}/bin/python";
+          UV_NO_MANAGED_PYTHON = "1";
           RUST_BACKTRACE = "1";
           OPENSSL_DIR = "${pkgs.openssl.dev}";
           OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
@@ -43,7 +45,7 @@
         shellHook = ''
           echo "Python: $(python --version)"
           echo "Rust: $(rustc --version)"
-          echo "Use 'maturin develop --uv' to build the Rust module"
+          echo "Use 'maturin develop --uv' or 'uv sync' to build the Rust module"
           uv sync
           source .venv/bin/activate
         '';
